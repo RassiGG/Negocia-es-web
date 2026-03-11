@@ -1,4 +1,5 @@
 import { NegociacaoController}  from "./controllers/negociacao-controller";
+
 const controller = new NegociacaoController();
 const form = document.querySelector('.form');
 
