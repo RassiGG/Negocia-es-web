@@ -14,6 +14,10 @@ export class NegociacaoController {
         this.inputData = data;
         this.inputQuantidade = quantidade;
         this.inputValor = valor;
+        // Sample data to show table immediately
+        this.negociacoes.adiciona(new Negociacao(new Date(), 100, 1.5));
+        this.negociacoes.adiciona(new Negociacao(new Date(Date.now() - 86400000), 200, 2.5)); // yesterday
+        this.negociacoes.adiciona(new Negociacao(new Date(Date.now() + 86400000), 300, 3.0)); // tomorrow
         this.negociacoesView.update(this.negociacoes);
     }
     adiciona() {
